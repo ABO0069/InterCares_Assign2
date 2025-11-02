@@ -1,0 +1,94 @@
+
+.curved-bottom-container {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.large-dots-pattern {
+  position: absolute;
+  right: -40px;  
+  bottom: -30px;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(#e6f7f0 30%, transparent 41%);
+  background-size: 16px 16px;
+  background-position: center;
+  opacity: 0.95;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+
+.curved-bottom-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .large-dots-pattern {
+    width: 120px;
+    height: 120px;
+    right: -16px;  
+    bottom: -16px;
+    background-size: 12px 12px;
+  }
+}
+
+.section-card {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.06);
+}
+.tile-image {
+  height: 420px;
+}
+
+@media (max-width: 767px) {
+  .h-56 { height: 220px; }
+}
+
+.product-image-ring { width: 112px; height: 112px; }
+.product-image-accent { width: 112px; height: 112px; }
+.section-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 640px) {
+  .product-image-ring,
+  .product-image-accent { width: 96px; height: 96px; }
+}
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.bg-overlay:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+.bg-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer { color: #0f172a; }
+footer .social-icon { color: #0f172a; display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:4px; }
+footer .social-icon:hover { color:#059669; }
+.subscribe-input { background:#f6f9f6; border-color:#e6efea; }
+
+@media (max-width: 640px) {
+  .site-hero .container { padding-top:48px; padding-bottom:48px; }
+  .site-hero h2 { font-size:1.5rem; }
+}
